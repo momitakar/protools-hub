@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger - ProTools Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    <header class="bg-white shadow-sm p-4">
+        <a href="/" class="text-indigo-600 font-bold">&larr; Back to Home</a>
+    </header>
+
+    <main class="max-w-xl mx-auto px-4 py-12">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold mb-4 text-slate-700">📄 PDF Merger</h2>
+            <p class="text-slate-500 text-sm mb-6">Select multiple PDF files to combine them into one.</p>
+            
+            <form action="/pdf-merger" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-600 mb-1">Select PDF Files (Select 2 or more)</label>
+                    <input type="file" name="pdf_files" multiple accept=".pdf" required class="w-full border border-slate-300 p-2 rounded-lg">
+                </div>
+
+                <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition">Merge PDFs</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

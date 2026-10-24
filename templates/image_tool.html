@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor & Converter - ProTools Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    <header class="bg-white shadow-sm p-4">
+        <a href="/" class="text-indigo-600 font-bold">&larr; Back to Home</a>
+    </header>
+
+    <main class="max-w-xl mx-auto px-4 py-12">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold mb-4 text-slate-700">🖼️ Image Compressor & Converter</h2>
+            
+            <form action="/image-tool" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-600 mb-1">Select Image File</label>
+                    <input type="file" name="image" required class="w-full border border-slate-300 p-2 rounded-lg">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-600 mb-1">Choose Action</label>
+                    <select name="action" class="w-full border border-slate-300 p-2 rounded-lg">
+                        <option value="compress">Compress Image (Reduce Size)</option>
+                        <option value="convert">Convert Format</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-600 mb-1">If Converting, Target Format:</label>
+                    <select name="format" class="w-full border border-slate-300 p-2 rounded-lg">
+                        <option value="jpeg">JPG / JPEG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition">Process Image</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
